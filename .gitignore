@@ -34,3 +34,6 @@ target/
 bin/
 obj/
 *.egg-info/
+/openspec/.ff0-ack
+**/.outside-voice/
+**/impl-reports/*review-package*.diff
