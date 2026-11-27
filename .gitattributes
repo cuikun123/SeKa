@@ -1,0 +1,4 @@
+# 统一换行符：仓库内一律存 LF，工作区检出也一律 LF（不依赖各机器的 core.autocrlf）
+# 依据：本机 core.autocrlf=true 来自 D:/Git/etc/gitconfig（系统级、不入库）；
+#       写成仓库级规则后，换机器 / 换 git / 换宿主（Claude / Codex / IDE 插件）行为一致。
+* text=auto eol=lf
