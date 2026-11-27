@@ -1,0 +1,36 @@
+# ---- OS / 编辑器 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*~
+
+# ---- 日志 / 临时文件 ----
+*.log
+*.tmp
+tmp/
+temp/
+
+# ---- 环境变量与密钥（务必不要提交）----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# ---- 依赖与构建产物（按实际技术栈增删）----
+node_modules/
+dist/
+build/
+out/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+target/
+bin/
+obj/
+*.egg-info/
