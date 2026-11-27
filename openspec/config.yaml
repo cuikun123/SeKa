@@ -29,10 +29,11 @@ context: |
   触发判定一律用具体行为描述，不用风险代号。
 
   ## 本项目｜tech stack / 约定（每个项目自填；新项目替换本段）
-  - 状态：2026-11-27 初始化的全新仓库，尚无业务代码；tech stack 未定 —— TODO 拍板后替换本段。
-  - 仓库：https://github.com/cuikun123/SeKa（默认分支 main，尚无 .gitattributes）。
-  - 宿主环境：Windows + PowerShell；git core.autocrlf=true（检出为 CRLF），跨平台协作前须补 .gitattributes 统一 eol。
-  - AI 宿主：pi（非 Claude Code）。openspec 集成装在全局 ~/.agents/skills（斜杠入口 /openspec-propose 等），仓内无 .pi/ 副本。
+  - 状态：2026-11-27 初始化的全新仓库，尚无业务代码；tech stack 未定 —— 待 /sdflow-architecture 产出 SAD 后回填本段（禁止在无代码时臆测选型）。
+  - 仓库：https://github.com/cuikun123/SeKa（默认分支 main）。
+  - 宿主环境：Windows + PowerShell。换行符由仓库级 .gitattributes（`* text=auto eol=lf`）钉死，不依赖各机器 core.autocrlf。
+  - AI 宿主：主力 Claude Code 与 Codex（pi 亦可，三者共用全局 ~/.agents/skills）。openspec 入口为 /openspec-propose 等 6 个 skill（core profile）；sdflow 主入口为 /sdflow-spec。
+  - 已知宿主差异：FF-0 分支门禁 hook 与 subagent 权限守卫仅在 Claude Code 生效（注册于 ~/.claude/settings.json），Codex / pi 下这两道门是纸面规则。
   - 产物语言：设计/变更文档用中文书写；OpenSpec 结构标题与 SHALL/MUST 关键词保持英文。
 
 # 按 artifact 注入的自定义规则（升级安全：在仓库内，openspec update 不覆盖）
